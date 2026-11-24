@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keiko Explains Lightchain</title>
+<meta name="description" content="Plain-English videos about Lightchain AI, hosted by Keiko the Orca.">
+<meta property="og:title" content="Keiko Explains Lightchain">
+<meta property="og:description" content="Plain-English videos about Lightchain AI, hosted by Keiko the Orca.">
+<meta property="og:image" content="posters/ep03.jpg">
+<link rel="icon" href="assets/symbol.png">
+<style>
+@font-face{font-family:Inter;src:url(assets/Inter-Regular.ttf);font-weight:400}
+@font-face{font-family:Inter;src:url(assets/Inter-Bold.ttf);font-weight:700}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#14152C;color:#CCCEEF;line-height:1.5}
+a{color:#CCCEEF}
+header{padding:28px 6vw 8px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header img{height:30px}
+.hero{padding:24px 6vw 8px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.hero img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid #5B4BFF;box-shadow:0 0 40px rgba(91,75,255,.5)}
+.hero h1{margin:0;font-size:clamp(28px,4.5vw,48px);color:#fff;line-height:1.1}
+.hero h1 span{background:linear-gradient(90deg,#5B4BFF,#EE11FB);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:10px 0 0;font-size:18px;max-width:640px}
+main{padding:24px 6vw 48px;display:grid;gap:36px}
+.ep{background:rgba(255,255,255,.04);border:1px solid rgba(91,75,255,.35);border-radius:18px;overflow:hidden}
+.ep video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.info{padding:18px 22px 22px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:#fff;background:linear-gradient(90deg,#5B4BFF,#DD00AC);padding:3px 10px;border-radius:99px;margin-right:8px}
+.len{font-size:14px;opacity:.8}
+.info h2{margin:10px 0 6px;color:#fff;font-size:24px}
+.info p{margin:0;font-size:16px}
+footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgba(204,206,239,.15)}
+@media(min-width:1100px){main{grid-template-columns:1fr 1fr}main .ep:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header>
+  <img src="assets/logo-white.png" alt="Lightchain">
+  <a href="https://lightchain.ai" target="_blank" rel="noopener noreferrer">lightchain.ai</a>
+</header>
+
+<section class="hero">
+  <img src="assets/keiko.png" alt="Keiko the Orca">
+  <div>
+    <h1>Keiko Explains <span>Lightchain</span></h1>
+    <p>The nerdy stuff, in plain English. Short videos hosted by Keiko the Orca. New episodes added here as they come out.</p>
+  </div>
+</section>
+
+<main>
+  <article class="ep">
+    <video controls preload="metadata" poster="posters/ep03.jpg" src="videos/ep03-api-workers.mp4"></video>
+    <div class="info">
+      <span class="tag">Episode 3</span><span class="len">2:00</span>
+      <h2>API Workers</h2>
+      <p>How you can help power Lightchain's AI without owning a GPU, explained with a food delivery story.</p>
+    </div>
+  </article>
+
+  <article class="ep">
+    <video controls preload="metadata" poster="posters/ep02.jpg" src="videos/ep02-how-to-buy-lcai.mp4"></video>
+    <div class="info">
+      <span class="tag">Episode 2</span><span class="len">2:22</span>
+      <h2>How to Buy LCAI</h2>
+      <p>Step by step on the official bridge, bridge.lightchain.ai: from ETH to LCAI on Lightchain in one transaction.</p>
+    </div>
+  </article>
+
+  <article class="ep">
+    <video controls preload="metadata" poster="posters/ep01.jpg" src="videos/ep01-what-is-lightchain.mp4"></video>
+    <div class="info">
+      <span class="tag">Episode 1</span><span class="len">2:32</span>
+      <h2>What is Lightchain?</h2>
+      <p>What Lightchain AI is and what it can be used for, for people brand new to it.</p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  Made by KeikoDev. Community explainer videos, not official Lightchain content. Always check facts at <a href="https://lightchain.ai" target="_blank" rel="noopener noreferrer">lightchain.ai</a> and never share your secret wallet words with anyone.
+</footer>
+</body>
+</html>
