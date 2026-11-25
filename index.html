@@ -7,7 +7,7 @@
 <meta name="description" content="Plain-English videos about Lightchain AI, hosted by Keiko the Orca.">
 <meta property="og:title" content="Keiko Explains Lightchain">
 <meta property="og:description" content="Plain-English videos about Lightchain AI, hosted by Keiko the Orca.">
-<meta property="og:image" content="posters/ep06.jpg">
+<meta property="og:image" content="posters/x03.jpg">
 <link rel="icon" href="assets/symbol.png">
 <style>
 @font-face{font-family:Inter;src:url(assets/Inter-Regular.ttf);font-weight:400}
@@ -31,7 +31,12 @@ main{padding:24px 6vw 48px;display:grid;gap:36px}
 .info h2{margin:10px 0 6px;color:#fff;font-size:24px}
 .info p{margin:0;font-size:16px}
 footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgba(204,206,239,.15)}
-@media(min-width:1100px){main{grid-template-columns:1fr 1fr}main .ep:first-child{grid-column:1/-1}}
+.tabs{padding:20px 6vw 0;display:flex;gap:10px;flex-wrap:wrap}
+.tabs button{font:inherit;font-weight:700;font-size:16px;color:#CCCEEF;background:rgba(255,255,255,.05);border:1px solid rgba(91,75,255,.45);border-radius:99px;padding:8px 20px;cursor:pointer}
+.tabs button[aria-selected=true]{color:#fff;background:linear-gradient(90deg,#5B4BFF,#DD00AC);border-color:transparent}
+.ep[hidden]{display:none}
+.tag.x{background:linear-gradient(90deg,#DD00AC,#EE11FB)}
+@media(min-width:1100px){main{grid-template-columns:1fr 1fr}main .ep.lead{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -44,12 +49,26 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
   <img src="assets/keiko.png" alt="Keiko the Orca">
   <div>
     <h1>Keiko Explains <span>Lightchain</span></h1>
-    <p>The nerdy stuff, in plain English. Short videos hosted by Keiko the Orca. New episodes added here as they come out.</p>
+    <p>The nerdy stuff, in plain English. Short videos hosted by Keiko the Orca: the Explains series plus fun extras. New videos added here as they come out.</p>
   </div>
 </section>
 
+<nav class="tabs" role="tablist">
+  <button role="tab" data-show="all" aria-selected="true">All</button>
+  <button role="tab" data-show="series" aria-selected="false">Series</button>
+  <button role="tab" data-show="extra" aria-selected="false">Extras</button>
+</nav>
+
 <main>
-  <article class="ep">
+  <article class="ep lead" data-cat="extra">
+    <video controls preload="metadata" poster="posters/x03.jpg" src="videos/x03-lightchain-rally.mp4"></video>
+    <div class="info">
+      <span class="tag x">Extra</span><span class="len">0:56</span>
+      <h2>Keiko's Lightchain Rally</h2>
+      <p>Keiko takes the podium and the crowd answers. What's the coin? LCAI! What's the chain? Lightchain!</p>
+    </div>
+  </article>
+  <article class="ep" data-cat="series">
     <video controls preload="metadata" poster="posters/ep06.jpg" src="videos/ep06-the-next-three-months.mp4"></video>
     <div class="info">
       <span class="tag">Episode 6</span><span class="len">1:24</span>
@@ -58,7 +77,7 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
     </div>
   </article>
 
-  <article class="ep">
+  <article class="ep" data-cat="series">
     <video controls preload="metadata" poster="posters/ep05.jpg" src="videos/ep05-what-makes-lightchain-unique.mp4"></video>
     <div class="info">
       <span class="tag">Episode 5</span><span class="len">1:46</span>
@@ -67,7 +86,7 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
     </div>
   </article>
 
-  <article class="ep">
+  <article class="ep" data-cat="series">
     <video controls preload="metadata" poster="posters/ep04.jpg" src="videos/ep04-lightchain-studio.mp4"></video>
     <div class="info">
       <span class="tag">Episode 4</span><span class="len">1:50</span>
@@ -76,7 +95,7 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
     </div>
   </article>
 
-  <article class="ep">
+  <article class="ep" data-cat="series">
     <video controls preload="metadata" poster="posters/ep03.jpg" src="videos/ep03-api-workers.mp4"></video>
     <div class="info">
       <span class="tag">Episode 3</span><span class="len">2:00</span>
@@ -85,7 +104,7 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
     </div>
   </article>
 
-  <article class="ep">
+  <article class="ep" data-cat="series">
     <video controls preload="metadata" poster="posters/ep02.jpg" src="videos/ep02-how-to-buy-lcai.mp4"></video>
     <div class="info">
       <span class="tag">Episode 2</span><span class="len">2:22</span>
@@ -94,7 +113,7 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
     </div>
   </article>
 
-  <article class="ep">
+  <article class="ep" data-cat="series">
     <video controls preload="metadata" poster="posters/ep01.jpg" src="videos/ep01-what-is-lightchain.mp4"></video>
     <div class="info">
       <span class="tag">Episode 1</span><span class="len">2:32</span>
@@ -102,10 +121,33 @@ footer{padding:24px 6vw 40px;font-size:14px;opacity:.75;border-top:1px solid rgb
       <p>What Lightchain AI is and what it can be used for, for people brand new to it.</p>
     </div>
   </article>
+  <article class="ep" data-cat="extra">
+    <video controls preload="metadata" poster="posters/x02.jpg" src="videos/x02-happy-birthday-lightchain.mp4"></video>
+    <div class="info">
+      <span class="tag x">Extra</span><span class="len">0:05</span>
+      <h2>Happy Birthday Lightchain!</h2>
+      <p>Keiko and friends celebrate Lightchain's 2nd birthday under the sea.</p>
+    </div>
+  </article>
+
+  <article class="ep" data-cat="extra">
+    <video controls preload="metadata" poster="posters/x01.jpg" src="videos/x01-aivm-explainer.mp4"></video>
+    <div class="info">
+      <span class="tag x">Extra</span><span class="len">0:50</span>
+      <h2>The Lightchain AIVM</h2>
+      <p>Where your A.I. answers come from on Lightchain: workers around the world, answers checked on chain, paid in LCAI.</p>
+    </div>
+  </article>
 </main>
 
 <footer>
-  Made by KeikoDev. Community explainer videos, not official Lightchain content. Always check facts at <a href="https://lightchain.ai" target="_blank" rel="noopener noreferrer">lightchain.ai</a> and never share your secret wallet words with anyone.
+  Made by KeikoDev. Community videos, not official Lightchain content. Always check facts at <a href="https://lightchain.ai" target="_blank" rel="noopener noreferrer">lightchain.ai</a> and never share your secret wallet words with anyone.
 </footer>
+<script>
+(function(){var b=document.querySelectorAll('.tabs button'),e=document.querySelectorAll('main .ep');
+function show(k){b.forEach(function(x){x.setAttribute('aria-selected',x.dataset.show===k)});var f=0;
+e.forEach(function(a){var on=k==='all'||a.dataset.cat===k;a.hidden=!on;a.classList.remove('lead');if(on&&!f){a.classList.add('lead');f=1}if(!on){var v=a.querySelector('video');v&&v.pause()}})}
+b.forEach(function(x){x.addEventListener('click',function(){show(x.dataset.show)})});})();
+</script>
 </body>
 </html>
